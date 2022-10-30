@@ -79,4 +79,4 @@ ufw allow from 192.168.0.0/16
 ufw allow ${PORT}/tcp
 ufw allow ${PORT}/udp
 
-system status shadowsocks
+systemctl status shadowsocks
