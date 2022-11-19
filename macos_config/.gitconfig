@@ -1,0 +1,17 @@
+[alias]
+	co = checkout
+	st = status
+    lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(cyan)%an<%ae>%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+    delbranch = "!f() { git checkout develop && git branch | grep -v develop | xargs -I {} git branch -D {}; }; f"
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+	email = meng94233@gmail.com
+	name = Meng
+[merge]
+	conflictstyle = diff3
+[push]
+	autoSetupRemote = true
