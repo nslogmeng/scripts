@@ -2,7 +2,7 @@
 	co = checkout
 	st = status
     lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(cyan)%an<%ae>%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-    delbranch = "!f() { git checkout develop && git branch | grep -v develop | xargs -I {} git branch -D {}; }; f"
+    delbranch = "!f() { git checkout develop && git branch | grep -v develop | grep -v main | xargs -I {} git branch -D {}; }; f"
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
