@@ -19,7 +19,7 @@ echo "Start init environment..."
 
 # init Ubuntu env
 sudo apt-get update
-sudo apt-get install -y --no-install-recommend git ufw
+sudo apt-get install -y --no-install-recommends git ufw
 
 echo "Setup shadowsocks-libev..."
 
@@ -32,7 +32,7 @@ cd shadowsocks-libev
 git checkout $SS_VERSION
 git submodule update --init --recursive
 
-./autogen.sh && ./config && make
+./autogen.sh && ./configure && make
 sudo make install
 
 cat > /etc/shadowsocks.json <<EOF
