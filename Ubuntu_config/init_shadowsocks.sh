@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SS_VERSION='v3.35'
+SS_VERSION='v3.3.5'
 IP=$1
 PORT=$2
 SS_PASSWORD=$3
