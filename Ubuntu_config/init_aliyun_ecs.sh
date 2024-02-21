@@ -24,7 +24,7 @@ chsh -s /bin/zsh
 
 echo "${GREEN_COLOR}install oh-my-zsh...${RESET_COLOR}"
 # install oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 echo "${GREEN_COLOR}install oh-my-zsh plugins..."
 # install oh-my-zsh custom plugins
