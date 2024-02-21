@@ -17,14 +17,14 @@ sudo apt-get install -y --no-install-recommends git curl zsh autojump
 TMPDIR=$(mktemp -d) || exit 1
 trap 'rm -rf "$TMPDIR"' EXIT
 echo "${GREEN_COLOR}fetch script repo ${TMPDIR}...${RESET_COLOR}"
-git clone https://github.com/nslogmeng/Scripts.git TMPDIR
+git clone https://github.com/nslogmeng/Scripts.git TMPDIR/Scripts
 
 # change to zsh
 chsh -s /bin/zsh
 
 echo "${GREEN_COLOR}install oh-my-zsh...${RESET_COLOR}"
 # install oh my zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "${GREEN_COLOR}install oh-my-zsh plugins..."
 # install oh-my-zsh custom plugins
@@ -32,7 +32,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
 echo "${GREEN_COLOR}set up oh-my-zsh...${RESET_COLOR}"
-mv $TMPDIR/Ubuntu_config/aliyun_ecs_zshrc ~/.zshrc
+mv $TMPDIR/Scripts/Ubuntu_config/aliyun_ecs_zshrc ~/.zshrc
 
 source ~/.zshrc
 
