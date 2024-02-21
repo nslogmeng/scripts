@@ -17,7 +17,7 @@ sudo apt-get install -y --no-install-recommends git curl zsh autojump
 TMPDIR=$(mktemp -d) || exit 1
 trap 'rm -rf "$TMPDIR"' EXIT
 echo "${GREEN_COLOR}fetch script repo ${TMPDIR}...${RESET_COLOR}"
-git clone https://github.com/nslogmeng/Scripts.git TMPDIR/Scripts
+git clone https://github.com/nslogmeng/Scripts.git $TMPDIR/Scripts
 
 # change to zsh
 chsh -s /bin/zsh
