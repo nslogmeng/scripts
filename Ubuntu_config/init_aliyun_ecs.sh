@@ -13,10 +13,10 @@ echo "${GREEN_COLOR}install required packages...${RESET_COLOR}"
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends git curl zsh autojump
 
-echo "${GREEN_COLOR}fetch script repo...${RESET_COLOR}"
 # clone scripts repos
 TMPDIR=$(mktemp -d) || exit 1
 trap 'rm -rf "$TMPDIR"' EXIT
+echo "${GREEN_COLOR}fetch script repo ${TMPDIR}...${RESET_COLOR}"
 git clone https://github.com/nslogmeng/Scripts.git TMPDIR
 
 # change to zsh
