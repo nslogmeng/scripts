@@ -26,7 +26,7 @@ echo "${GREEN_COLOR}install oh-my-zsh...${RESET_COLOR}"
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-echo "${GREEN_COLOR}install oh-my-zsh plugins..."
+echo "${GREEN_COLOR}install oh-my-zsh plugins...${RESET_COLOR}"
 # install oh-my-zsh custom plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
