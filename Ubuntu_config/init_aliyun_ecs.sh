@@ -17,7 +17,7 @@ sudo apt-get install -y --no-install-recommends git curl zsh autojump
 TMPDIR=$(mktemp -d) || exit 1
 trap 'rm -rf "$TMPDIR"' EXIT
 echo "${GREEN_COLOR}fetch script repo ${TMPDIR}...${RESET_COLOR}"
-git clone https://github.com/nslogmeng/Scripts.git $TMPDIR/Scripts
+git clone https://github.com/nslogmeng/scripts.git $TMPDIR/scripts
 
 # change to zsh
 chsh -s /bin/zsh
@@ -32,7 +32,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
 echo "${GREEN_COLOR}set up oh-my-zsh...${RESET_COLOR}"
-mv $TMPDIR/Scripts/Ubuntu_config/aliyun_ecs_zshrc ~/.zshrc
+mv $TMPDIR/scripts/Ubuntu_config/aliyun_ecs_zshrc ~/.zshrc
 
 source ~/.zshrc
 
