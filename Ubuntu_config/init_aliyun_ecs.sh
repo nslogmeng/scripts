@@ -28,8 +28,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 echo "${GREEN_COLOR}install oh-my-zsh plugins..."
 # install oh-my-zsh custom plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 echo "${GREEN_COLOR}set up oh-my-zsh...${RESET_COLOR}"
 mv $TMPDIR/scripts/Ubuntu_config/aliyun_ecs_zshrc ~/.zshrc
