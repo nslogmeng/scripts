@@ -9,7 +9,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 [user]
-	email = meng94233@gmail.com
+	email = nslogmeng@gmail.com
 	name = Meng
 [merge]
 	conflictstyle = diff3
