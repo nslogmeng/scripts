@@ -8,7 +8,7 @@ cat /etc/shells
 
 echo "install required packages..."
 sudo apt-get update
-sudo apt-get  -y --no-install-recommends git curl zsh autojump
+sudo apt-get install -y --no-install-recommends git curl zsh autojump
 
 # clone scripts repos
 TMPDIR=$(mktemp -d) || exit 1
