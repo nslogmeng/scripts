@@ -1,4 +1,4 @@
-#!/bin/bash
+# !/bin/bash
 
 GREEN_COLOR='\033[0;32m'
 RESET_COLOR='\033[0m'
@@ -34,6 +34,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-
 echo "${GREEN_COLOR}set up oh-my-zsh...${RESET_COLOR}"
 mv $TMPDIR/scripts/Ubuntu_config/aliyun_ecs_zshrc ~/.zshrc
 
-source ~/.zshrc
-
 echo "${GREEN_COLOR} initial Aliyun ECS done!${RESET_COLOR}"
+exec zsh -l
