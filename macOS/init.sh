@@ -7,6 +7,14 @@ set -e
 
 echo "${GREEN_COLOR}start initial macOS..${RESET_COLOR}"
 
+#check zsh
+if [ -z "$ZSH_VERSION" ]; then
+    echo "${GREEN_COLOR}zsh is not installed, switching to zsh...${RESET_COLOR}"
+    chsh -s /bin/zsh
+else
+    echo "${GREEN_COLOR}zsh is already the default shell.${RESET_COLOR}"
+fi
+
 # check homebrew
 if ! command -v brew &> /dev/null; then
     echo "${GREEN_COLOR}install home brew...${RESET_COLOR}"
