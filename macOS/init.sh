@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 
 GREEN_COLOR='\033[0;32m'
 RESET_COLOR='\033[0m'
