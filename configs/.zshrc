@@ -105,5 +105,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# setup cursor
-echo -ne "\e[5 q"
+function github() {
+	cd ~/Codes/GitHub;
+	git clone $1
+	name=`basename $1`
+	cd ${name%.*}
+}
